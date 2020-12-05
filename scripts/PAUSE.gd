@@ -9,6 +9,7 @@ func _ready():
 func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):
 		if get_tree().paused:
+			Save.save_game() # Save when you leave the game. You can remove this line
 			get_tree().quit()
 		
 		get_tree().paused = true
