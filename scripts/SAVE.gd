@@ -17,6 +17,8 @@ var menu = VBoxContainer.new() # A container that will display "> game saved" an
 var can_use = true # To avoid spamming quick save and quick load a boolean with a yield is used
 
 func _ready():
+	pause_mode = PAUSE_MODE_PROCESS # This script can't get paused
+	
 	add_child(menu)
 	
 	if file.file_exists(path):
